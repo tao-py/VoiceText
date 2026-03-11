@@ -25,6 +25,7 @@ yarn-error.log*
 
 # IDE 配置
 .vscode/
+models
 .idea/
 *.swp
 *.swo
