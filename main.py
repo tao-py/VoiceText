@@ -9,6 +9,7 @@ sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 # 导入模块
 import STT
+import voice
 from Ui import voice_rumps_macos
 
 class VoiceTTinput:

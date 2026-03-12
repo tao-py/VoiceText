@@ -251,10 +251,11 @@ class VoiceRecorder:
         """使用pyautogui插入文本"""
         try:
             # 短暂延迟，确保焦点在正确的窗口
-            time.sleep(0.2)
+            time.sleep(0.1)
             
             # 使用pyautogui输入文本
-            pyautogui.write(text, interval=0.01)  # interval可以调整输入速度
+            # pyautogui.write(text, interval=0.005)  # interval可以调整输入速度
+            self._insert_text_via_clipboard(text)
             
             print("✅ 文字已填入光标位置 (使用pyautogui)")
             
@@ -279,7 +280,7 @@ class VoiceRecorder:
             
             # 模拟粘贴操作 (Cmd+V on Mac, Ctrl+V on Windows/Linux)
             if sys.platform == 'darwin':  # macOS
-                keyboard.press_and_release('command+v')
+                keyboard.press_and_release('command+V')
             else:  # Windows/Linux
                 keyboard.press_and_release('ctrl+v')
             
